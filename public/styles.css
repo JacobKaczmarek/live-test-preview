@@ -1,0 +1,32 @@
+body {
+    font-family: helvetica;
+}
+
+.controll-panel {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 25px 40px;
+    margin: 25px;
+    border: 2px solid rgb(255, 99, 132);
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background: rgba(255, 99, 132, 0.3);
+}
+
+.main-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
