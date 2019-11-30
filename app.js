@@ -31,9 +31,12 @@ const parser = new Readline();
 
 port.pipe(parser);
 
-port.on("data", data => console.log(data.toString()));
-
 // Socket.io setup
 const io = require("socket.io")(server);
 
-io.on("connection", socket => {});
+io.on("connection", socket => {
+  port.on("data", data => {
+    console.log(data.toString());
+    socket.emit("data", data.toString());
+  });
+});
