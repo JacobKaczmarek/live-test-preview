@@ -1,9 +1,12 @@
 const ctx = 'readings';
 
-let time = [];
-let thrust = [];
-let temp = [];
+document.getElementById('start').addEventListener('click', () => {
+    axios.get('http://localhost:3000/start');
+});
 
+document.getElementById('stop').addEventListener('click', () => {
+    axios.get('http://localhost:3000/stop');
+});
 
 let chart = new Chart(ctx, {
     type: 'line',
