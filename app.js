@@ -7,14 +7,18 @@ const PORT = 3000;
 
 app.use(express.static('public'));
 
-app.get('/start', () => {
-    port.write('420');
+app.get('/start', (req, res) => {
+    // port.write('420');
     console.log('Launched');
+
+    res.sendStatus(200);
 });
 
-app.get('/stop', () => {
-    port.write('stop');
+app.get('/stop', (req, res) => {
+    // port.write('stop');
     console.log('Stopped');
+
+    res.sendStatus(200);
 });
 
 server.listen(PORT, () => console.log('Listening...'))
